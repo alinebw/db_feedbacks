@@ -1,4 +1,4 @@
-# db_feedbacks - Documentação do Banco de Dados
+# feedbacks_db - Documentação do Banco de Dados
 
 ## Visão Geral
 
@@ -181,7 +181,7 @@ Este banco de dados foi projetado para se conectar com sistemas externos, permit
 ## Fluxo de Dados e Integração
 
 **Recebimento de Dados:** Quando um formulário é enviado, uma função Lambda recebe o payload do webhook do Typeform e envia os dados para as devidas tabelas.<br>
-**Atualização de Dados:** Duas a trêz vezes ao dia, uma trigger é acionada e chama uma procedure que sincroniza o db_feedbacks com o db_sistema.<br>
+**Atualização de Dados:** Duas a trêz vezes ao dia, uma trigger é acionada e chama uma procedure que sincroniza o feedbacks_db com o sistema_db.<br>
 **Cálculo de Métricas:** Após a sincronização, são calculados os valores de CSAT e NPS.<br>
 **Envio de Métricas:** As métricas calculadas são enviadas de volta ao sistema_db através de procedures.<br>
 
